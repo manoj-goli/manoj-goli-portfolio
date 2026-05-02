@@ -1,7 +1,11 @@
 ---
 import Badge from "@components/ui/Badge.astro";
 import Card from "@components/ui/Card.astro";
-import { featuredProjects } from "@data/home";
+import { getCollection } from "astro:content";
+
+const featuredProjects = (await getCollection("projects"))
+  .filter((project) => project.data.featured)
+  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
 ---
 
 <section class="section-padding bg-surface-alt">
@@ -21,12 +25,16 @@ import { featuredProjects } from "@data/home";
     <div class="grid gap-5 md:grid-cols-3">
       {
         featuredProjects.map((project) => (
-          <Card href={project.href} class="h-full">
+          <Card href={`/projects/${project.id}`} class="h-full">
             <div class="flex h-full flex-col">
-              <h3 class="text-xl font-semibold leading-snug text-primary">{project.title}</h3>
-              <p class="mt-3 flex-1 text-sm leading-6 text-text-muted">{project.description}</p>
+              <h3 class="text-xl font-semibold leading-snug text-primary">
+                {project.data.title}
+              </h3>
+              <p class="mt-3 flex-1 text-sm leading-6 text-text-muted">
+                {project.data.description}
+              </p>
               <div class="mt-5 flex flex-wrap gap-2">
-                {project.tags.map((tag) => (
+                {project.data.tags.map((tag) => (
                   <Badge>{tag}</Badge>
                 ))}
               </div>

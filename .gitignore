@@ -9,3 +9,5 @@ mcp_config.json
 *.jpg
 !public/images/*.jpg
 *.png
+
+test-results/
