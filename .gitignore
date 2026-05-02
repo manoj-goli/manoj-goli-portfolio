@@ -1,0 +1,9 @@
+node_modules
+.astro
+dist
+package-lock.json
+project_files.json
+mcp_config.json
+*.HEIC
+*.jpg
+*.png
