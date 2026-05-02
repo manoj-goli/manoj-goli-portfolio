@@ -5,7 +5,7 @@ export const hero = {
   tagline:
     "Specialized in Kubernetes, CI/CD, and enterprise-scale observability patterns that empower teams.",
   primaryCta: { label: "View Projects", href: "/projects" },
-  secondaryCta: { label: "Download Resume", href: "/resume" },
+  secondaryCta: { label: "Download Resume", href: "/resume/MANOJ_GOLI_Resume.pdf" },
 };
 
 export const highlights = [

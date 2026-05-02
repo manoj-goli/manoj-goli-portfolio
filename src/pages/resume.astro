@@ -5,7 +5,7 @@ import Card from "@components/ui/Card.astro";
 import { site } from "@data/site";
 
 const title = `Resume - ${site.name}`;
-const description = "Resume placeholder for Manoj Goli.";
+const description = "Download Manoj Goli's resume for platform engineering and observability roles.";
 ---
 
 <BaseLayout title={title} description={description}>
@@ -17,18 +17,23 @@ const description = "Resume placeholder for Manoj Goli.";
         </p>
         <h1 class="section-heading">Resume</h1>
         <p class="section-lead mt-5">
-          A downloadable resume PDF will be added here. For now, this page keeps the resume route
-          available from the site navigation.
+          A concise overview of platform engineering, observability, Kubernetes, CI/CD, and
+          practical AI proof of concept experience.
         </p>
       </div>
 
       <Card class="mt-10 max-w-2xl">
-        <h2 class="text-xl font-semibold text-primary">Resume content placeholder</h2>
+        <h2 class="text-xl font-semibold text-primary">Download the resume</h2>
         <p class="mt-3 text-text-muted">
-          Platform engineering, observability, Kubernetes, CI/CD, and practical AI proof of
-          concept experience.
+          Use the PDF for a recruiter-friendly summary of experience, technical focus areas,
+          and project work.
         </p>
-        <Button href="/contact" variant="secondary" class="mt-6">Contact Manoj</Button>
+        <div class="mt-6 flex flex-col gap-3 sm:flex-row">
+          <Button href={site.resumePath} target="_blank" rel="noopener noreferrer">
+            View Resume PDF
+          </Button>
+          <Button href="/contact" variant="secondary">Contact Manoj</Button>
+        </div>
       </Card>
     </div>
   </section>
