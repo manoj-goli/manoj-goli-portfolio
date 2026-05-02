@@ -5,5 +5,7 @@ package-lock.json
 project_files.json
 mcp_config.json
 *.HEIC
+# Ignore JPG files by default, but allow website public images
 *.jpg
+!public/images/*.jpg
 *.png
