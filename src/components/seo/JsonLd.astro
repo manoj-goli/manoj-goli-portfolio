@@ -1,0 +1,26 @@
+---
+import { site } from "@data/site";
+
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: site.name,
+  jobTitle: site.title,
+  url: site.url,
+  sameAs: [site.socials.github, site.socials.linkedin],
+  worksFor: {
+    "@type": "Organization",
+    name: "IBM",
+  },
+};
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: `${site.name} Portfolio`,
+  url: site.url,
+  description: site.description,
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify([personSchema, websiteSchema])}></script>
