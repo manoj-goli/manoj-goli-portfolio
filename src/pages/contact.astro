@@ -1,0 +1,73 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import { site } from "@data/site";
+
+const title = `Contact - ${site.name}`;
+const description = "Get in touch with Manoj Goli.";
+---
+
+<BaseLayout title={title} description={description}>
+  <section class="section-padding bg-surface">
+    <div class="container-page">
+      <div class="max-w-3xl">
+        <p class="mb-3 text-sm font-semibold uppercase tracking-[0.14em] text-accent">
+          Contact
+        </p>
+        <h1 class="section-heading">Get in touch</h1>
+        <p class="section-lead mt-5">
+          Have a question or want to discuss platform engineering, observability, or AI
+          prototypes? Feel free to reach out.
+        </p>
+      </div>
+
+      <div class="mt-10 max-w-xl rounded-card border border-border bg-white p-8 shadow-card">
+        <form name="contact" method="POST" data-netlify="true" class="space-y-4">
+          <input type="hidden" name="form-name" value="contact" />
+          <p class="hidden">
+            <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+          </p>
+          
+          <div>
+            <label for="name" class="block text-sm font-medium text-primary">Name</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              required
+              class="mt-1 block w-full rounded-button border border-border bg-surface px-4 py-2 text-primary focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
+            />
+          </div>
+          
+          <div>
+            <label for="email" class="block text-sm font-medium text-primary">Email</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              required
+              class="mt-1 block w-full rounded-button border border-border bg-surface px-4 py-2 text-primary focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
+            />
+          </div>
+          
+          <div>
+            <label for="message" class="block text-sm font-medium text-primary">Message</label>
+            <textarea
+              name="message"
+              id="message"
+              rows="4"
+              required
+              class="mt-1 block w-full rounded-button border border-border bg-surface px-4 py-2 text-primary focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
+            ></textarea>
+          </div>
+          
+          <button
+            type="submit"
+            class="w-full rounded-button bg-accent py-3 text-sm font-semibold text-white transition-colors hover:bg-accent-hover focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2"
+          >
+            Send Message
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,35 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import { site } from "@data/site";
+
+const title = `About - ${site.name}`;
+const description = "Manoj Goli's professional journey in platform and observability engineering.";
+---
+
+<BaseLayout title={title} description={description}>
+  <section class="section-padding bg-surface">
+    <div class="container-page">
+      <div class="max-w-3xl">
+        <p class="mb-3 text-sm font-semibold uppercase tracking-[0.14em] text-accent">
+          About Manoj
+        </p>
+        <h1 class="section-heading">Platform engineering focused on reliability</h1>
+        <p class="section-lead mt-5">
+          Based on the project foundation, Manoj Goli specializes in building and scaling
+          cloud-native platforms that emphasize observability and automated delivery.
+        </p>
+
+        <div class="mt-8 space-y-6 text-text-muted">
+          <p>
+            Manoj has experience working with Kubernetes, CI/CD pipelines, and observability
+            toolsets to ensure application uptime and developer productivity.
+          </p>
+          <p>
+            Currently focusing on practical AI integration, specifically RAG patterns and AI
+            governance, to help teams adopt modern technology safely and effectively.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

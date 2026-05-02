@@ -1,0 +1,35 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import Button from "@components/ui/Button.astro";
+import Card from "@components/ui/Card.astro";
+import { site } from "@data/site";
+
+const title = `Resume - ${site.name}`;
+const description = "Resume placeholder for Manoj Goli.";
+---
+
+<BaseLayout title={title} description={description}>
+  <section class="section-padding bg-surface">
+    <div class="container-page">
+      <div class="max-w-3xl">
+        <p class="mb-3 text-sm font-semibold uppercase tracking-[0.14em] text-accent">
+          Resume
+        </p>
+        <h1 class="section-heading">Resume</h1>
+        <p class="section-lead mt-5">
+          A downloadable resume PDF will be added here. For now, this page keeps the resume route
+          available from the site navigation.
+        </p>
+      </div>
+
+      <Card class="mt-10 max-w-2xl">
+        <h2 class="text-xl font-semibold text-primary">Resume content placeholder</h2>
+        <p class="mt-3 text-text-muted">
+          Platform engineering, observability, Kubernetes, CI/CD, and practical AI proof of
+          concept experience.
+        </p>
+        <Button href="/contact" variant="secondary" class="mt-6">Contact Manoj</Button>
+      </Card>
+    </div>
+  </section>
+</BaseLayout>

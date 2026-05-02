@@ -1,0 +1,40 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import Card from "@components/ui/Card.astro";
+import { site } from "@data/site";
+
+const title = `Experience - ${site.name}`;
+const description = "Manoj Goli's professional experience in platform and reliability engineering.";
+---
+
+<BaseLayout title={title} description={description}>
+  <section class="section-padding bg-surface">
+    <div class="container-page">
+      <div class="max-w-3xl">
+        <p class="mb-3 text-sm font-semibold uppercase tracking-[0.14em] text-accent">
+          Experience
+        </p>
+        <h1 class="section-heading">Professional journey</h1>
+        <p class="section-lead mt-5">
+          Focusing on SRE, Platform Engineering, and technical leadership to deliver reliable and
+          modern application platforms.
+        </p>
+      </div>
+
+      <div class="mt-10 space-y-8">
+        <Card>
+          <div class="flex flex-col justify-between gap-2 sm:flex-row sm:items-center">
+            <h2 class="text-xl font-bold text-primary">Platform & Reliability Engineer</h2>
+            <span class="text-sm font-medium text-accent">Present</span>
+          </div>
+          <p class="mt-1 text-sm font-semibold text-primary-light">IBM Client Engineering</p>
+          <p class="mt-4 text-sm leading-6 text-text-muted">
+            Leading observability and platform reliability initiatives for enterprise clients.
+            Building AI proof-of-concept patterns to streamline operations and demonstrate
+            modern application teams.
+          </p>
+        </Card>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

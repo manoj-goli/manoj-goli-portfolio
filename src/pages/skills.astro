@@ -1,0 +1,55 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import Card from "@components/ui/Card.astro";
+import { site } from "@data/site";
+
+const title = `Skills - ${site.name}`;
+const description = "Skills placeholder for Manoj Goli's platform engineering portfolio.";
+
+const skillGroups = [
+  {
+    title: "Platform",
+    items: ["Kubernetes", "Cloud-native systems", "CI/CD"],
+  },
+  {
+    title: "Observability",
+    items: ["SLOs", "Dashboards", "Monitoring"],
+  },
+  {
+    title: "AI Prototypes",
+    items: ["RAG", "Governance patterns", "Proofs of concept"],
+  },
+];
+---
+
+<BaseLayout title={title} description={description}>
+  <section class="section-padding bg-surface">
+    <div class="container-page">
+      <div class="max-w-3xl">
+        <p class="mb-3 text-sm font-semibold uppercase tracking-[0.14em] text-accent">
+          Skills
+        </p>
+        <h1 class="section-heading">Technical focus areas</h1>
+        <p class="section-lead mt-5">
+          A placeholder skills index for platform engineering, observability, automation, and AI
+          prototype work.
+        </p>
+      </div>
+
+      <div class="mt-10 grid gap-5 md:grid-cols-3">
+        {
+          skillGroups.map((group) => (
+            <Card>
+              <h2 class="text-xl font-semibold text-primary">{group.title}</h2>
+              <ul class="mt-4 space-y-2 text-sm leading-6 text-text-muted">
+                {group.items.map((item) => (
+                  <li>{item}</li>
+                ))}
+              </ul>
+            </Card>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</BaseLayout>
