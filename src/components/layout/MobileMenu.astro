@@ -1,0 +1,94 @@
+---
+const navLinks = [
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Experience", href: "/experience" },
+  { label: "Projects", href: "/projects" },
+  { label: "Skills", href: "/skills" },
+  { label: "Contact", href: "/contact" },
+  { label: "Resume", href: "/resume" },
+];
+---
+
+<div class="md:hidden">
+  <button
+    id="menu-toggle"
+    class="flex h-10 w-10 items-center justify-center rounded-button text-primary hover:bg-surface-alt"
+    aria-expanded="false"
+    aria-label="Toggle navigation menu"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      class="menu-icon"
+    >
+      <line x1="4" y1="12" x2="20" y2="12" class="line-middle"></line>
+      <line x1="4" y1="6" x2="20" y2="6" class="line-top"></line>
+      <line x1="4" y1="18" x2="20" y2="18" class="line-bottom"></line>
+    </svg>
+  </button>
+
+  <div
+    id="mobile-nav"
+    class="fixed inset-0 top-14 z-50 translate-x-full bg-white transition-transform duration-300 ease-in-out"
+    aria-hidden="true"
+  >
+    <nav class="flex flex-col p-6">
+      {
+        navLinks.map((link) => (
+          <a
+            href={link.href}
+            class="border-b border-border py-4 text-lg font-semibold text-primary"
+          >
+            {link.label}
+          </a>
+        ))
+      }
+    </nav>
+  </div>
+</div>
+
+<script>
+  const menuToggle = document.getElementById("menu-toggle");
+  const mobileNav = document.getElementById("mobile-nav");
+  const body = document.body;
+
+  if (menuToggle && mobileNav) {
+    menuToggle.addEventListener("click", () => {
+      const isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
+      menuToggle.setAttribute("aria-expanded", (!isExpanded).toString());
+      mobileNav.classList.toggle("translate-x-full");
+      mobileNav.classList.toggle("translate-x-0");
+      mobileNav.setAttribute("aria-hidden", isExpanded.toString());
+      body.classList.toggle("overflow-hidden");
+    });
+  }
+</script>
+
+<style>
+  #menu-toggle[aria-expanded="true"] .line-top {
+    transform: translateY(6px) rotate(45deg);
+    transform-origin: center;
+  }
+  #menu-toggle[aria-expanded="true"] .line-middle {
+    opacity: 0;
+  }
+  #menu-toggle[aria-expanded="true"] .line-bottom {
+    transform: translateY(-6px) rotate(-45deg);
+    transform-origin: center;
+  }
+  .line-top,
+  .line-middle,
+  .line-bottom {
+    transition:
+      transform 0.2s ease,
+      opacity 0.2s ease;
+  }
+</style>
