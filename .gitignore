@@ -11,3 +11,5 @@ mcp_config.json
 *.png
 
 test-results/
+
+.private/
