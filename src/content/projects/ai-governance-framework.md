@@ -1,45 +1,68 @@
 ---
 title: "AI Governance Framework"
-description: "Proof of concept for managing RAG-based AI agent compliance and monitoring."
-date: 2026-01-18
+description: "Watsonx.governance proof of concept for governing third-party ML and GenAI model endpoints."
+date: 2024-08-01
 tags:
-  - Python
-  - LangChain
-  - VectorDB
+  - Watsonx.governance
+  - FastAPI
+  - Azure OpenAI
 featured: true
 status: "Draft case study"
 tools:
+  - Watsonx.governance
+  - Watsonx.ai
+  - IBM Code Engine
+  - Azure GPU VM
+  - Azure OpenAI
+  - AWS SageMaker
+  - LocalAI
+  - Llama 3.1
+  - Elasticsearch
+  - FastAPI
   - Python
-  - LangChain
-  - Vector database
-  - Retrieval-augmented generation
-  - Evaluation workflows
+  - Docker
+  - CP4D
+  - DB2
 ---
 
 ## Context
 
-AI proof of concept work needs practical guardrails before it can become a reliable workflow. This sanitized project captures a governance-oriented pattern for retrieval-augmented generation and agent-style prototypes without referencing private data or client details.
+Public-sector proof-of-concept work focused on Watsonx.governance and third-party model governance. The work explored governance for models running outside Watsonx, including Azure OpenAI, AWS SageMaker, and self-hosted or containerized models.
 
 ## Problem
 
-The prototype needed to show how generated answers could be grounded in approved content, monitored for quality, and reviewed against basic governance expectations. The goal was not only to produce answers, but to make the system easier to inspect.
+The client needed a centralized way to govern AI models across multiple platforms and clouds. The proof of concept needed to connect hosted and containerized model endpoints into governance workflows while supporting prompt and payload visibility.
 
-## My role
+## My contributions
 
-I worked on the technical structure of the proof of concept, including retrieval flow design, evaluation checkpoints, and the operational questions teams would need to answer before moving from demo to production consideration.
+- Helped design and deliver a Watsonx.governance proof of concept for third-party model governance.
+- Provisioned CP4D and Watsonx.governance environments through IBM TechZone and ROKS.
+- Built and containerized FastAPI model-serving endpoints.
+- Deployed model-serving workloads to IBM Code Engine and worked with Azure GPU VM-based LocalAI/Llama 3.1 patterns.
+- Supported Elasticsearch-backed RAG flow integration and live prompt/payload logging.
+- Resolved CP4D, DB2, firewalld, and network blockers during the build.
 
 ## Technical approach
 
-The approach used a Python-based RAG workflow with a vector store, retrieval constraints, prompt structure, and simple evaluation hooks. The system separated source ingestion, retrieval, generation, and review so each step could be reasoned about independently.
+The approach connected Watsonx.governance to third-party model endpoints, including Azure OpenAI, AWS SageMaker, and self-hosted/containerized model patterns. Work included FastAPI endpoints, Docker containers, IBM Code Engine deployment, LocalAI/Llama 3.1 exploration on an Azure GPU VM, Elasticsearch-backed RAG flow support, and live prompt/payload logging.
 
 ## Outcome
 
-The proof of concept created a clearer model for discussing AI readiness, including where governance checks fit, what should be logged, and how teams could compare output quality across iterations.
+The proof of concept demonstrated platform-agnostic AI governance patterns, connected hosted and containerized endpoints to Watsonx.governance, and created reusable internal knowledge for future governance engagements.
 
 ## Tools used
 
+- Watsonx.governance
+- Watsonx.ai
+- IBM Code Engine
+- Azure GPU VM
+- Azure OpenAI
+- AWS SageMaker
+- LocalAI
+- Llama 3.1
+- Elasticsearch
+- FastAPI
 - Python
-- LangChain
-- Vector database
-- Retrieval-augmented generation
-- Evaluation workflows
+- Docker
+- CP4D
+- DB2

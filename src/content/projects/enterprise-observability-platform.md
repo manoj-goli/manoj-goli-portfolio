@@ -1,45 +1,50 @@
 ---
-title: "Enterprise Observability Platform"
-description: "Standardized monitoring and alerting patterns for hybrid cloud environments."
-date: 2026-01-10
+title: "Enterprise Observability & Monitoring"
+description: "Instana-focused observability work across technical monitoring, KPIs, thresholds, event policies, and OpenShift workload visibility."
+date: 2026-04-01
 tags:
-  - Instana
+  - IBM Instana
   - OpenShift
-  - Prometheus
+  - Dashboards
 featured: true
 status: "Draft case study"
 tools:
   - Instana
   - OpenShift
-  - Prometheus
-  - Grafana
+  - Linux
   - Kubernetes
+  - Distributed tracing
+  - Automation scripts
 ---
 
 ## Context
 
-Large platform teams often need a repeatable observability foundation across containerized services, shared platform components, and hybrid cloud environments. This sanitized case study describes the reusable pattern without naming any client, account, or private system.
+Current IBM Consulting work focused on observability for a large enterprise banking environment. This public version keeps client and system details limited while summarizing the technical scope.
 
 ## Problem
 
-Teams needed consistent service visibility, actionable alerts, and a common way to discuss reliability. Monitoring existed in separate places, but the experience was difficult to standardize across teams and environments.
+Operational teams need clear visibility into application and platform behavior across Linux, container, Kubernetes, and OpenShift environments. Monitoring work needs to support dashboards, thresholds, event policies, and distributed tracing views aligned to operational needs.
 
-## My role
+## My contributions
 
-I helped shape the observability approach, map platform signals to team workflows, and translate reliability goals into dashboards and alerting patterns that could be reused by multiple application teams.
+- Build and tune technical monitoring dashboards for CPU, memory, heap, Red Hat OpenShift workloads, and event management.
+- Define KPIs, thresholds, visualization layouts, and alerting logic aligned with operational needs.
+- Contribute to event policy tuning and distributed tracing visibility.
+- Support Instana agent deployment automation with repeatable scripts, pre-checks, rollback thinking, and logging.
 
 ## Technical approach
 
-The solution centered on Kubernetes and OpenShift workloads with service-level dashboards, health indicators, and alert paths tied to operational ownership. Instana provided application visibility, while Prometheus and Grafana patterns supported platform metrics and shared reporting.
+The work centers on Instana dashboards, OpenShift workload monitoring, event management, distributed tracing visibility, and alerting logic. Agent deployment automation is supported with scripts, pre-checks, rollback thinking, and logging.
 
 ## Outcome
 
-The resulting pattern gave teams a clearer starting point for monitoring new services, reduced one-off dashboard work, and made reliability conversations more concrete through shared metrics and alert expectations.
+The work contributes to stronger operational visibility, clearer dashboard structures, better threshold discussions, and more repeatable monitoring setup.
 
 ## Tools used
 
 - Instana
 - OpenShift
-- Prometheus
-- Grafana
+- Linux
 - Kubernetes
+- Distributed tracing
+- Automation scripts

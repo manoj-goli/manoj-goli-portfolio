@@ -4,7 +4,7 @@ import Card from "@components/ui/Card.astro";
 import { site } from "@data/site";
 
 const title = `Experience - ${site.name}`;
-const description = "Manoj Goli's professional experience in platform and reliability engineering.";
+const description = "Manoj Goli's professional experience in observability, platform engineering, and client-facing technical delivery.";
 ---
 
 <BaseLayout title={title} description={description}>
@@ -16,22 +16,39 @@ const description = "Manoj Goli's professional experience in platform and reliab
         </p>
         <h1 class="section-heading">Professional journey</h1>
         <p class="section-lead mt-5">
-          Focusing on SRE, Platform Engineering, and technical leadership to deliver reliable and
-          modern application platforms.
+          Experience across observability engineering, customer-facing platform development,
+          Kubernetes/OpenShift deployments, AI pilots, and production support.
         </p>
       </div>
 
       <div class="mt-10 space-y-8">
         <Card>
           <div class="flex flex-col justify-between gap-2 sm:flex-row sm:items-center">
-            <h2 class="text-xl font-bold text-primary">Platform & Reliability Engineer</h2>
-            <span class="text-sm font-medium text-accent">Present</span>
+            <h2 class="text-xl font-bold text-primary">
+              Instana Engineer / Observability Engineer, Contract
+            </h2>
+            <span class="text-sm font-medium text-accent">Apr 2026 - Present</span>
           </div>
-          <p class="mt-1 text-sm font-semibold text-primary-light">IBM Client Engineering</p>
+          <p class="mt-1 text-sm font-semibold text-primary-light">IBM Consulting</p>
           <p class="mt-4 text-sm leading-6 text-text-muted">
-            Leading observability and platform reliability initiatives for enterprise clients.
-            Building AI proof-of-concept patterns to streamline operations and demonstrate
-            modern application teams.
+            Supporting observability work for a large enterprise banking client, including
+            Instana dashboards, KPI and threshold definition, event policies, distributed tracing
+            visibility, and agent deployment automation across Linux, containers, Kubernetes, and
+            OpenShift environments.
+          </p>
+        </Card>
+
+        <Card>
+          <div class="flex flex-col justify-between gap-2 sm:flex-row sm:items-center">
+            <h2 class="text-xl font-bold text-primary">Platform Developer, Client Engineering</h2>
+            <span class="text-sm font-medium text-accent">Jul 2022 - Dec 2025</span>
+          </div>
+          <p class="mt-1 text-sm font-semibold text-primary-light">IBM Canada</p>
+          <p class="mt-4 text-sm leading-6 text-text-muted">
+            Contributed to customer-facing PoCs, MVPs, pilots, client working sessions, and
+            technical playbacks for Canadian public sector clients. Built backend APIs, identity
+            integrations, containerized applications, deployment assets, RAG workflows, and AI
+            governance proof-of-concept components.
           </p>
         </Card>
       </div>

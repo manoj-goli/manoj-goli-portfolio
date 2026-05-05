@@ -4,20 +4,94 @@ import Card from "@components/ui/Card.astro";
 import { site } from "@data/site";
 
 const title = `Skills - ${site.name}`;
-const description = "Skills placeholder for Manoj Goli's platform engineering portfolio.";
+const description = "Technical skills across platform engineering, observability, AI, APIs, identity, and troubleshooting.";
 
 const skillGroups = [
   {
-    title: "Platform",
-    items: ["Kubernetes", "Cloud-native systems", "CI/CD"],
+    title: "Platform & Cloud",
+    items: [
+      "Kubernetes",
+      "OpenShift",
+      "Docker",
+      "Podman",
+      "Minikube",
+      "IBM Code Engine",
+      "GCP / GKE",
+      "Azure VM",
+      "Quay.io",
+      "Kubernetes manifests",
+    ],
   },
   {
-    title: "Observability",
-    items: ["SLOs", "Dashboards", "Monitoring"],
+    title: "Observability & Reliability",
+    items: [
+      "Instana",
+      "Datadog",
+      "Grafana",
+      "Prometheus",
+      "OpenTelemetry concepts",
+      "KPIs, thresholds, alerting, and SLA-aware operations",
+      "Distributed tracing concepts",
+      "CPU, memory, heap, and OpenShift workload monitoring",
+    ],
   },
   {
-    title: "AI Prototypes",
-    items: ["RAG", "Governance patterns", "Proofs of concept"],
+    title: "AI, RAG & Governance",
+    items: [
+      "Watsonx.ai",
+      "Watsonx.governance",
+      "RAG architecture",
+      "Prompt engineering",
+      "Third-party model governance",
+      "LlamaIndex",
+      "LangChain",
+      "Elasticsearch / ELSER semantic search",
+      "Azure OpenAI and AWS SageMaker integration",
+    ],
+  },
+  {
+    title: "Application & API Development",
+    items: [
+      "Python",
+      "JavaScript",
+      "Node.js",
+      "Express.js",
+      "FastAPI",
+      "Flask",
+      "REST APIs",
+      "Pydantic",
+      "React",
+      "Frontend-to-backend integration",
+    ],
+  },
+  {
+    title: "Identity & Security",
+    items: [
+      "IBM Security Verify",
+      "SAML SSO",
+      "Azure Active Directory integration",
+      "RBAC",
+      "JWT-based authentication",
+      "Secure session handling",
+      "Secrets management",
+      "Kubernetes secrets",
+      "Synthetic data handling",
+    ],
+  },
+  {
+    title: "Delivery & Troubleshooting",
+    items: [
+      "CI/CD concepts",
+      "Jenkins",
+      "Dockerfile creation",
+      "Deployment YAML authoring",
+      "Release support",
+      "Incident triage",
+      "RCA and runbooks",
+      "Layered troubleshooting",
+      "Technical documentation",
+      "Client playbacks and handoffs",
+    ],
   },
 ];
 ---
@@ -31,8 +105,8 @@ const skillGroups = [
         </p>
         <h1 class="section-heading">Technical focus areas</h1>
         <p class="section-lead mt-5">
-          A placeholder skills index for platform engineering, observability, automation, and AI
-          prototype work.
+          Skills built through platform engineering, observability, AI proof-of-concept delivery,
+          identity integration, application support, and client-facing technical work.
         </p>
       </div>
 
