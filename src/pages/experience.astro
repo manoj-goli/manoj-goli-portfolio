@@ -5,6 +5,57 @@ import { site } from "@data/site";
 
 const title = `Experience - ${site.name}`;
 const description = "Manoj Goli's professional experience in observability, platform engineering, and client-facing technical delivery.";
+
+const roles = [
+  {
+    title: "Instana Observability Engineer, Contract",
+    company: "IBM Canada",
+    date: "Apr 2026 - Present",
+    summary:
+      "Supporting a large enterprise banking client with Instana-focused observability across dashboards, KPIs, thresholds, event policies, distributed tracing visibility, and OpenShift workload monitoring.",
+    bullets: [
+      "Build and tune technical monitoring dashboards for CPU, memory, heap, and OpenShift workloads.",
+      "Support KPI, threshold, alerting, and event policy configuration for operational visibility.",
+      "Contribute to repeatable Instana agent deployment automation across Linux, containers, Kubernetes, and OpenShift environments.",
+    ],
+  },
+  {
+    title: "Platform Developer, Client Engineering",
+    company: "IBM Canada",
+    date: "Jul 2022 - Dec 2025",
+    summary:
+      "Delivered customer-facing PoCs, MVPs, pilots, working sessions, and technical playbacks for Canadian public sector clients.",
+    bullets: [
+      "Built backend APIs, identity integrations, containerized applications, and Kubernetes/OpenShift deployment assets.",
+      "Supported AI governance, RAG, Watsonx, IBM Security Verify, Turbonomic, and public-sector modernization engagements.",
+      "Translated ambiguous client requirements into working demos, reusable assets, documentation, and technical handoffs.",
+    ],
+  },
+  {
+    title: "App Support Team Lead",
+    company: "Carousel Group / MaximBet",
+    date: "Sep 2020 - Jul 2022",
+    summary:
+      "Led application support team of 10 members for 24/7 i-gaming platforms running across GCP/GKE and on-prem Kubernetes environments.",
+    bullets: [
+      "Supported high-availability Kubernetes workloads using logs, metrics, health checks, and incident triage.",
+      "Built and maintained Datadog and Grafana dashboards to improve production visibility.",
+      "Supported Jenkins deployment workflows, Jira automation, RBAC, release tracking, and app-vs-infra troubleshooting.",
+    ],
+  },
+  {
+    title: "Application / Mainframe Support",
+    company: "HCL Technologies",
+    date: "Jul 2016 - Jul 2018",
+    summary:
+      "Supported enterprise application and batch workflow operations with a focus on incident triage, RCA, runbooks, and production stability.",
+    bullets: [
+      "Monitored and supported production batch workflows and recurring operational processes.",
+      "Investigated job failures, coordinated recovery, and documented RCA/runbook steps.",
+      "Helped stabilize recurring support processes and strengthen operational reliability.",
+    ],
+  },
+];
 ---
 
 <BaseLayout title={title} description={description}>
@@ -14,43 +65,37 @@ const description = "Manoj Goli's professional experience in observability, plat
         <p class="mb-3 text-sm font-semibold uppercase tracking-[0.14em] text-accent">
           Experience
         </p>
-        <h1 class="section-heading">Professional journey</h1>
+        <h1 class="section-heading">Relevant Experience</h1>
         <p class="section-lead mt-5">
-          Experience across observability engineering, customer-facing platform development,
-          Kubernetes/OpenShift deployments, AI pilots, and production support.
+          Hands-on experience across observability engineering, customer-facing platform delivery,
+          Kubernetes/OpenShift deployments, AI pilots, identity integration, and production
+          support.
         </p>
       </div>
 
-      <div class="mt-10 space-y-8">
-        <Card>
-          <div class="flex flex-col justify-between gap-2 sm:flex-row sm:items-center">
-            <h2 class="text-xl font-bold text-primary">
-              Instana Engineer / Observability Engineer, Contract
-            </h2>
-            <span class="text-sm font-medium text-accent">Apr 2026 - Present</span>
-          </div>
-          <p class="mt-1 text-sm font-semibold text-primary-light">IBM Consulting</p>
-          <p class="mt-4 text-sm leading-6 text-text-muted">
-            Supporting observability work for a large enterprise banking client, including
-            Instana dashboards, KPI and threshold definition, event policies, distributed tracing
-            visibility, and agent deployment automation across Linux, containers, Kubernetes, and
-            OpenShift environments.
-          </p>
-        </Card>
-
-        <Card>
-          <div class="flex flex-col justify-between gap-2 sm:flex-row sm:items-center">
-            <h2 class="text-xl font-bold text-primary">Platform Developer, Client Engineering</h2>
-            <span class="text-sm font-medium text-accent">Jul 2022 - Dec 2025</span>
-          </div>
-          <p class="mt-1 text-sm font-semibold text-primary-light">IBM Canada</p>
-          <p class="mt-4 text-sm leading-6 text-text-muted">
-            Contributed to customer-facing PoCs, MVPs, pilots, client working sessions, and
-            technical playbacks for Canadian public sector clients. Built backend APIs, identity
-            integrations, containerized applications, deployment assets, RAG workflows, and AI
-            governance proof-of-concept components.
-          </p>
-        </Card>
+      <div class="mt-10 space-y-6">
+        {
+          roles.map((role) => (
+            <Card>
+              <div class="flex flex-col justify-between gap-2 sm:flex-row sm:items-start">
+                <div>
+                  <h2 class="text-xl font-bold text-primary">{role.title}</h2>
+                  <p class="mt-1 text-sm font-semibold text-primary-light">{role.company}</p>
+                </div>
+                <span class="shrink-0 text-sm font-medium text-accent">{role.date}</span>
+              </div>
+              <p class="mt-4 text-sm leading-6 text-text-muted">{role.summary}</p>
+              <ul class="mt-5 space-y-2 text-sm leading-6 text-text-muted">
+                {role.bullets.map((bullet) => (
+                  <li class="flex gap-3">
+                    <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
+                    <span>{bullet}</span>
+                  </li>
+                ))}
+              </ul>
+            </Card>
+          ))
+        }
       </div>
     </div>
   </section>

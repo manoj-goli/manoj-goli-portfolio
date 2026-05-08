@@ -1,13 +1,13 @@
 ---
 title: "Identity Integration & Kubernetes Deployment"
-description: "IBM Security Verify integration with a React/Node.js sample application and repeatable Kubernetes deployment assets."
-date: 2025-02-01
+description: "Integrated IBM Security Verify with a React/Node.js web application, including login, logout, session handling, custom attributes, and repeatable Kubernetes deployment assets."
+date: 2025-02-02
 tags:
   - IBM Security Verify
   - Kubernetes
   - React/Node.js
 featured: true
-status: "Draft case study"
+status: "Project case study"
 tools:
   - IBM Security Verify
   - React
@@ -23,28 +23,27 @@ tools:
 
 ## Context
 
-ESDC Data Fabric proof-of-concept work for a Single View of Client experience. The demo used synthetic data and required secure login, session handling, custom user attributes, and deployment readiness.
+This Data Fabric proof of concept supported a Single View of Client experience using synthetic data. The demo required secure login, session handling, custom user attributes, and deployment-ready application packaging.
 
 ## Problem
 
-The proof of concept needed a secure application flow where users could log in, log out, maintain sessions, and use custom identity attributes to support personalized data filtering in a public-sector-aligned demo environment.
+The proof of concept needed a secure application flow for login, logout, session handling, and custom attribute-based data filtering in a public-sector-aligned demo environment.
 
 ## My contributions
 
-- Integrated IBM Security Verify with a React and Node.js sample application.
-- Developed login and logout flows and resolved login/session issues.
-- Configured and tested custom user attributes for personalized data filtering.
-- Built and tested a Dockerfile for the application.
-- Created and refined Kubernetes manifests for configuration, deployment, namespace, route, secret, service, and ingress resources.
-- Pushed the application image to Quay.io and validated deployment on Minikube.
+- Integrated IBM Security Verify with a React/Node.js web application, including login, logout, and session handling.
+- Configured and tested custom user attributes to support personalized data filtering.
+- Containerized the application with Docker and published the image to Quay.io.
+- Created Kubernetes manifests for config, deployment, namespace, route, secret, service, and ingress resources.
+- Validated the deployment on Minikube and resolved local deployment issues.
 
 ## Technical approach
 
-The application was containerized with Docker, published through Quay.io, and validated locally with Minikube. Kubernetes YAML covered configuration, deployment, namespace, route, secret, service, and ingress resources while the identity flow used IBM Security Verify custom attributes and session handling.
+The application was packaged with Docker, published through Quay.io, and validated locally on Minikube. Kubernetes manifests covered configuration, deployment, namespace, route, secret, service, and ingress resources. The identity flow used IBM Security Verify for login, logout, session handling, and custom user attributes.
 
 ## Outcome
 
-The work delivered secure login/logout and custom attribute flow for the proof-of-concept app, produced a containerized and locally deployable application ready for OpenShift transition, and helped stakeholders understand the identity setup, code, and deployment workflow.
+Delivered secure login/logout, session handling, and custom-attribute based data filtering for the proof-of-concept application. The work also packaged the app with Docker and Kubernetes deployment assets, making it easier to validate locally and prepare for OpenShift transition.
 
 ## Tools used
 
@@ -56,5 +55,5 @@ The work delivered secure login/logout and custom attribute flow for the proof-o
 - Kubernetes
 - Minikube
 - Quay.io
-- YAML
-- Custom attributes
+- Kubernets YAML
+- Custom Attributes

@@ -1,13 +1,14 @@
 ---
-title: "Enterprise Observability & Monitoring"
-description: "Instana-focused observability work across technical monitoring, KPIs, thresholds, event policies, and OpenShift workload visibility."
+title: "Enterprise Monitoring Transition with Instana"
+description: "Supporting an enterprise monitoring transition to IBM Instana by reviewing existing monitoring rules, rebuilding alerting logic, and improving operational visibility across Linux, container, Kubernetes, and OpenShift environments."
 date: 2026-04-01
+displayDate: "April 2026 - Present"
 tags:
   - IBM Instana
   - OpenShift
   - Dashboards
 featured: true
-status: "Draft case study"
+status: "In-progress case study"
 tools:
   - Instana
   - OpenShift
@@ -19,7 +20,7 @@ tools:
 
 ## Context
 
-Current IBM Consulting work focused on observability for a large enterprise banking environment. This public version keeps client and system details limited while summarizing the technical scope.
+Current IBM Consulting work supporting a large enterprise banking client during a monitoring transition to Instana (IBM Observability & APM solution). The work involves reviewing existing production monitoring rules, assessing what can be exported or inventoried, and rebuilding the right monitoring logic in Instana while keeping client and system details private.
 
 ## Problem
 
@@ -27,18 +28,19 @@ Operational teams need clear visibility into application and platform behavior a
 
 ## My contributions
 
-- Build and tune technical monitoring dashboards for CPU, memory, heap, Red Hat OpenShift workloads, and event management.
+- Review and inventory existing production monitoring rules from a retiring Dynatrace APM setup.
+- Assess what can be exported, reused, or rebuilt as Instana event policies and alerting logic.
+- Build and tune Instana dashboards for CPU, memory, heap, OpenShift workloads, and event management.
 - Define KPIs, thresholds, visualization layouts, and alerting logic aligned with operational needs.
-- Contribute to event policy tuning and distributed tracing visibility.
-- Support Instana agent deployment automation with repeatable scripts, pre-checks, rollback thinking, and logging.
+- Support knowledge transfer by helping another engineer ramp up on Instana workflows.
 
 ## Technical approach
 
-The work centers on Instana dashboards, OpenShift workload monitoring, event management, distributed tracing visibility, and alerting logic. Agent deployment automation is supported with scripts, pre-checks, rollback thinking, and logging.
+The work starts with understanding the existing monitoring rule inventory from a retiring legacy APM setup. From there, the focus is on rebuilding the right alerting logic in Instana, tuning event policies, and creating dashboards that improve visibility across Linux, Kubernetes, and OpenShift workloads.
 
-## Outcome
+## Current focus
 
-The work contributes to stronger operational visibility, clearer dashboard structures, better threshold discussions, and more repeatable monitoring setup.
+The current focus is to create a reliable inventory of existing production monitoring rules, rebuild the right rules in Instana, improve dashboard and event policy structure, and support knowledge transfer so the client team can adopt Instana with more confidence.
 
 ## Tools used
 

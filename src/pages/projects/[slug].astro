@@ -23,7 +23,7 @@ const { project } = Astro.props;
 const { Content } = await render(project);
 const title = `${project.data.title} - ${site.name}`;
 const description = project.data.description;
-const dateLabel = project.data.date.toLocaleDateString("en", {
+const dateLabel = project.data.displayDate || project.data.date.toLocaleDateString("en", {
   month: "long",
   year: "numeric",
 });
